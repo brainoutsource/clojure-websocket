@@ -11,7 +11,7 @@
                     on-close   (constantly nil)
                     on-error   (constantly nil)}}]
   (let [client (proxy [WebSocketClient] [(URI. url)]
-               (onOpen [handshake] (on-open client handshake))
+               (onOpen [handshake] (on-open this handshake))
                (onMessage [msg] (on-message msg))
                (onClose [code msg closed-by-server] (on-close code msg closed-by-server))
                (onError [ex] (on-error ex)))
