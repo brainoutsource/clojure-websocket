@@ -1,4 +1,4 @@
-(defproject clojure-websocket "0.1.0-SNAPSHOT"
+(defproject clojure-websocket "0.2.0-SNAPSHOT"
   :description "Jetty-free Clojure websocket client"
   :url "https://github.com/brainoutsource/clojure-websocket"
   :license {:name "Eclipse Public License"

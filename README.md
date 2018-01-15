@@ -6,9 +6,9 @@ A clojure wrapper for [TooTallNate/Java-WebSocket](https://github.com/TooTallNat
 
 ```
 (def client (connect "wss://some-service/"
-          :on-open    (fn [_] (println "Open"))
+          :on-open    (fn [client handshake] (println "Open"))
           :on-message (fn [msg] (println (str "Message: " msg))
-          :on-close   (fn [code msg by-server] (println (str "Closed: " code "," msg "," by-server)))
+          :on-close   (fn [code reason by-server] (println (str "Closed: " code "," reason "," by-server)))
           :on-error   (fn [ex] (clojure.stacktrace/print-stack-trace ex)))))
 
 (send-msg client "some-message")
