@@ -1,5 +1,7 @@
 # clojure-websocket
 
+[![Clojars Project](https://img.shields.io/clojars/v/clojure-websocket.svg)](https://clojars.org/clojure-websocket)
+
 A clojure wrapper for [TooTallNate/Java-WebSocket](https://github.com/TooTallNate/Java-WebSocket) which is 100% Jetty-free.
 
 ## Usage
